@@ -51,27 +51,27 @@ target_link_libraries(
 )
 
 # Add executable
-add_executable(cam_pub src/main_cam_pub.cpp)
+add_executable(cam_pub_node src/main_cam_pub.cpp)
 
 target_link_libraries(
-  cam_pub
+  cam_pub_node
   cam_pub_lib
 )
 
 # Add threaded test executable
 add_executable(
-  cam_pub_threaded 
+  cam_pub_threaded_node 
   src/cam_pub_threaded.cpp
   src/main_cam_pub_threaded.cpp
 )
 target_link_libraries(
-  cam_pub_threaded
+  cam_pub_threaded_node
   cam_pub_lib
 )
 
 install(TARGETS
-  cam_pub
-  cam_pub_threaded
+  cam_pub_node
+  cam_pub_threaded_node
   cam_pub_lib
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib

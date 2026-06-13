@@ -37,7 +37,7 @@ def generate_launch_description():
         ),
         Node(
             package='cam_pub',
-            executable='cam_pub',
+            executable='cam_pub_node',
             name='cam_pub',
             namespace=namespace,
             parameters=[param_file_path],
@@ -46,7 +46,7 @@ def generate_launch_description():
         ),
         Node(
             package='cam_pub',
-            executable='cam_pub_threaded',
+            executable='cam_pub_threaded_node',
             name='cam_pub',
             namespace=namespace,
             parameters=[param_file_path],
