@@ -10,7 +10,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     default_param_file = PathJoinSubstitution([
-        get_package_share_directory('object_tracker'),
+        get_package_share_directory('cam_pub'),
         'config',
         'webcam.yaml'
     ])
@@ -36,7 +36,7 @@ def generate_launch_description():
             description='Path to the parameters YAML file'
         ),
         Node(
-            package='object_tracker',
+            package='cam_pub',
             executable='cam_pub',
             name='cam_pub',
             namespace=namespace,
@@ -45,7 +45,7 @@ def generate_launch_description():
             condition=UnlessCondition(threaded)
         ),
         Node(
-            package='object_tracker',
+            package='cam_pub',
             executable='cam_pub_threaded',
             name='cam_pub',
             namespace=namespace,

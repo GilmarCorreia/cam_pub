@@ -1,4 +1,4 @@
-#include "object_tracker/cam_pub.hpp"
+#include "cam_pub/cam_pub.hpp"
 
 // Constructor
 CamPub::CamPub(bool init) : Node("cam_pub")
@@ -137,7 +137,7 @@ void CamPub::initialize()
     // Publishers
     this->campub_ = this->create_publisher<sensor_msgs::msg::Image>(
         this->get_camera_topic(), rclcpp::SensorDataQoS());
-    this->status_pub_ = this->create_publisher<object_tracker::msg::CamStatus>(
+    this->status_pub_ = this->create_publisher<cam_pub::msg::CamStatus>(
         this->get_camera_status_topic(), rclcpp::QoS(10).reliable());
 
     // Timers
@@ -149,7 +149,7 @@ void CamPub::initialize()
 void CamPub::timer_callback()
 {
     auto message = sensor_msgs::msg::Image();
-    auto status_message = object_tracker::msg::CamStatus();
+    auto status_message = cam_pub::msg::CamStatus();
 
     status_message.header.stamp = this->get_clock()->now();
 

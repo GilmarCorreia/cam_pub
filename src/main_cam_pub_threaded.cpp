@@ -1,4 +1,4 @@
-#include "object_tracker/cam_pub_threaded.hpp"
+#include "cam_pub/cam_pub_threaded.hpp"
 
 int main(int argc, char *argv[])
 {

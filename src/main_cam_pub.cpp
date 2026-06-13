@@ -1,4 +1,4 @@
-#include "object_tracker/cam_pub.hpp"
+#include "cam_pub/cam_pub.hpp"
 
 // Main function
 int main(int argc, char *argv[])
