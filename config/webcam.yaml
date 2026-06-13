@@ -1,0 +1,11 @@
+/**/cam_pub:
+  ros__parameters:
+    use_sim_time: false
+    camera_name: camera
+    camera_topic: /image_raw
+    camera_status_topic: /status
+    device_path: /dev/video0
+    image_size: 
+      - 640
+      - 480
+    publish_rate: 30
