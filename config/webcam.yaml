@@ -5,7 +5,7 @@
     camera_topic: /image_raw
     camera_status_topic: /status
     device_path: /dev/video0
-    image_size: 
+    image_size:
       - 640
       - 480
-    publish_rate: 30
+    publish_rate: 15
