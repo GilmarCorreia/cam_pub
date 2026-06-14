@@ -137,7 +137,7 @@ void CamPub::initialize()
     // Publishers
     this->campub_ = this->create_publisher<sensor_msgs::msg::Image>(
         this->get_camera_topic(), rclcpp::SensorDataQoS());
-    this->status_pub_ = this->create_publisher<cam_pub::msg::CamStatus>(
+    this->status_pub_ = this->create_publisher<challenge_interfaces::msg::CamStatus>(
         this->get_camera_status_topic(), rclcpp::QoS(10).reliable());
 
     // Timers
@@ -149,7 +149,7 @@ void CamPub::initialize()
 void CamPub::timer_callback()
 {
     auto message = sensor_msgs::msg::Image();
-    auto status_message = cam_pub::msg::CamStatus();
+    auto status_message = challenge_interfaces::msg::CamStatus();
 
     status_message.header.stamp = this->get_clock()->now();
 

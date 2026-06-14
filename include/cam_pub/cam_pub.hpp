@@ -14,7 +14,7 @@
 // ROS2 Imports
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/image.hpp"
-#include "cam_pub/msg/cam_status.hpp"
+#include "challenge_interfaces/msg/cam_status.hpp"
 
 // Definitions
 using namespace std::chrono_literals;
@@ -47,7 +47,7 @@ protected:
 
     // Publishers
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr campub_;
-    rclcpp::Publisher<cam_pub::msg::CamStatus>::SharedPtr status_pub_;
+    rclcpp::Publisher<challenge_interfaces::msg::CamStatus>::SharedPtr status_pub_;
 
     // Timers
     rclcpp::TimerBase::SharedPtr timer_;
