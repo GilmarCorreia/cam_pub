@@ -46,7 +46,7 @@ target_link_libraries(
 
 # Add threaded test executable
 add_executable(
-  cam_pub_threaded_node 
+  cam_pub_threaded_node
   src/cam_pub_threaded.cpp
   src/main_cam_pub_threaded.cpp
 )

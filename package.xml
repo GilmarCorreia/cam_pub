@@ -14,7 +14,7 @@
   <depend>rclcpp</depend>
   <depend>sensor_msgs</depend>
   <depend>challenge_interfaces</depend>
-  
+
   <exec_depend>cv_bridge</exec_depend>
   <exec_depend>image_transport</exec_depend>
 
